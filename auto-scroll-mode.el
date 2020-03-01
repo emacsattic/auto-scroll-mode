@@ -1,6 +1,6 @@
 ;;; auto-scroll-mode.el --- Auto scroll buffer -*- lexical-binding: t; -*-
 
-;;; Time-stamp: <2020-03-01 19:09:24 stardiviner>
+;;; Time-stamp: <2020-03-01 19:20:20 stardiviner>
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "25"))
@@ -24,8 +24,10 @@
 
 ;;; Commentary:
 ;;; 
-;;; Usage:
-;;; [M-x auto-scroll-mode]
+;;; Usage
+;;; 
+;;; 1. [M-x auto-scroll-mode] to launch `auto-scroll-mode'.
+;;; 2. Stop auto-scroll-mode by pressing [q] or [C-g].
 
 ;;; Code:
 
