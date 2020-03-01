@@ -115,7 +115,7 @@
   :keymap auto-scroll-mode-map
   (if auto-scroll-mode
       (auto-scroll-start)
-    (auto-scroll-quit)))
+    (auto-scroll-stop)))
 
 
 (provide 'auto-scroll-mode)
