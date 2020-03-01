@@ -1,6 +1,6 @@
 ;;; auto-scroll-mode.el --- Auto scroll buffer -*- lexical-binding: t; -*-
 
-;;; Time-stamp: <2020-03-01 19:20:20 stardiviner>
+;;; Time-stamp: <2020-03-01 19:21:42 stardiviner>
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "25"))
@@ -39,7 +39,7 @@
 
 (defcustom auto-scroll-highlight-line-face '((foreground-color . "black")
                                              (background-color . "orange"))
-  "The face spec for auto-scroll-mode highlight line."
+  "The face spec for `auto-scroll-mode' highlight line."
   :type 'list
   :safe #'listp
   :group 'auto-scroll-mode)
@@ -93,7 +93,7 @@
   (message "auto-scroll-mode stopped."))
 
 (defun auto-scroll-pause-or-resume ()
-  "Pause or resume auto-scroll-mode."
+  "Pause or resume `auto-scroll-mode'."
   (interactive)
   (if auto-scroll--timer
       (auto-scroll-stop)
@@ -101,7 +101,7 @@
 
 ;;;###autoload
 (defun auto-scroll-quit ()
-  "Disable auto-scroll-mode."
+  "Disable `auto-scroll-mode'."
   (interactive)
   (auto-scroll-mode -1))
 
@@ -123,7 +123,7 @@
     (define-key map (kbd "+") #'auto-scroll-speed-up)
     (define-key map (kbd "-") #'auto-scroll-speed-down)
     map)
-  "Keymap for auto-scroll-mode.")
+  "Keymap for `auto-scroll-mode'.")
 
 ;;;###autoload
 (define-minor-mode auto-scroll-mode
