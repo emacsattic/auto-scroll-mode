@@ -1,6 +1,6 @@
 ;;; auto-scroll-mode.el --- Auto scroll buffer -*- lexical-binding: t; -*-
 
-;;; Time-stamp: <2020-03-01 18:38:21 stardiviner>
+;;; Time-stamp: <2020-03-01 18:47:41 stardiviner>
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "25"))
@@ -78,7 +78,7 @@
         (run-with-timer 0 (/ 1.0 auto-scroll-lps) #'auto-scroll--update))
   (message "auto-scroll-mode started..."))
 
-(defun auto-scroll-quit ()
+(defun auto-scroll-stop ()
   "Stop auto scroll."
   (interactive)
   (when auto-scroll--timer
@@ -87,6 +87,18 @@
     (delete-overlay auto-scroll--overlay))
   (read-only-mode -1)
   (message "auto-scroll-mode stopped."))
+
+(defun auto-scroll-pause-or-resume ()
+  "Pause or resume auto-scroll-mode."
+  (interactive)
+  (if auto-scroll--timer
+      (auto-scroll-stop)
+    (auto-scroll-start)))
+
+(defun auto-scroll-quit ()
+  "Disable auto-scroll-mode."
+  (interactive)
+  (auto-scroll-mode -1))
 
 (defvar auto-scroll-mode-map
   (let ((map (make-sparse-keymap)))
