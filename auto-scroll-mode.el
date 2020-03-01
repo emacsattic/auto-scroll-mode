@@ -1,6 +1,6 @@
 ;;; auto-scroll-mode.el --- Auto scroll buffer -*- lexical-binding: t; -*-
 
-;;; Time-stamp: <2020-03-01 19:01:48 stardiviner>
+;;; Time-stamp: <2020-03-01 19:09:24 stardiviner>
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "25"))
@@ -66,6 +66,7 @@
                    'face auto-scroll-highlight-line-face)
       (forward-line 1))))
 
+;;;###autoload
 (defun auto-scroll-start ()
   "Start auto scroll."
   (interactive)
@@ -78,6 +79,7 @@
         (run-with-timer 0 (/ 1.0 auto-scroll-lps) #'auto-scroll--update))
   (message "auto-scroll-mode started..."))
 
+;;;###autoload
 (defun auto-scroll-stop ()
   "Stop auto scroll."
   (interactive)
@@ -95,6 +97,7 @@
       (auto-scroll-stop)
     (auto-scroll-start)))
 
+;;;###autoload
 (defun auto-scroll-quit ()
   "Disable auto-scroll-mode."
   (interactive)
@@ -120,6 +123,7 @@
     map)
   "Keymap for auto-scroll-mode.")
 
+;;;###autoload
 (define-minor-mode auto-scroll-mode
   "Auto scroll buffer minor mode."
   :init nil
