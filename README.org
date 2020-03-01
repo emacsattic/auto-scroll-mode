@@ -1,5 +1,7 @@
 * Intro
 
+[[file:screencast.gif]]
+
 Auto scroll buffer to auto reading without touching keyboard.
 
 这个就相当于App中的“自动阅读翻页模式”。
