@@ -1,6 +1,6 @@
 ;;; auto-scroll-mode.el --- Auto scroll buffer -*- lexical-binding: t; -*-
 
-;;; Time-stamp: <2020-03-01 18:47:41 stardiviner>
+;;; Time-stamp: <2020-03-01 19:01:48 stardiviner>
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "25"))
@@ -100,11 +100,23 @@
   (interactive)
   (auto-scroll-mode -1))
 
+(defun auto-scroll-speed-up ()
+  "Speed up auto scroll."
+  (interactive)
+  (setq auto-scroll-lps (incf auto-scroll-lps 0.2)))
+
+(defun auto-scroll-speed-down ()
+  "Speed down auto scroll."
+  (interactive)
+  (setq auto-scroll-lps (decf auto-scroll-lps 0.2)))
+
 (defvar auto-scroll-mode-map
   (let ((map (make-sparse-keymap)))
     (define-key map (kbd "q") #'auto-scroll-quit)
     (define-key map (kbd "SPC") #'auto-scroll-pause-or-resume)
     (define-key map [remap keyboard-quit] #'auto-scroll-quit)
+    (define-key map (kbd "+") #'auto-scroll-speed-up)
+    (define-key map (kbd "-") #'auto-scroll-speed-down)
     map)
   "Keymap for auto-scroll-mode.")
 
