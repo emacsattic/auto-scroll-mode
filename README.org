@@ -6,6 +6,14 @@ Auto scroll buffer to auto reading without touching keyboard.
 
 这个就相当于App中的“自动阅读翻页模式”。
 
+The core code is borrowed from "Spray".
+
+* Features
+
+- speed up/down reading interactively
+- resume from previous paused position
+- support customize overlay face
+
 * Installation
 
 MELPA available soon.
