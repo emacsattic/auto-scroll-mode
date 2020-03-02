@@ -1,6 +1,6 @@
 ;;; auto-scroll-mode.el --- Auto scroll buffer -*- lexical-binding: t; -*-
 
-;;; Time-stamp: <2020-03-02 18:54:33 stardiviner>
+;;; Time-stamp: <2020-03-02 18:58:12 stardiviner>
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "25"))
@@ -31,7 +31,7 @@
 
 ;;; Code:
 
-(defcustom auto-scroll-lps 0.5
+(defcustom auto-scroll-lps 0.4
   "Auto scroll lines per second."
   :type 'float
   :safe #'floatp
