@@ -1,6 +1,6 @@
 ;;; auto-scroll-mode.el --- Auto scroll buffer -*- lexical-binding: t; -*-
 
-;;; Time-stamp: <2020-03-01 19:21:42 stardiviner>
+;;; Time-stamp: <2020-03-02 18:27:40 stardiviner>
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "25"))
@@ -74,9 +74,8 @@
   (interactive)
   (read-only-mode 1)
   ;; resume from paused position
-  (if auto-scroll--line-position
-      (goto-line auto-scroll--line-position)
-    (goto-char (point-min)))
+  (when auto-scroll--line-position
+    (goto-line auto-scroll--line-position))
   (setq auto-scroll--timer
         (run-with-timer 0 (/ 1.0 auto-scroll-lps) #'auto-scroll--update))
   (message "auto-scroll-mode started..."))
