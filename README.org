@@ -8,4 +8,16 @@ Auto scroll buffer to auto reading without touching keyboard.
 
 * Installation
 
+MELPA available soon.
+
+#+begin_src emacs-lisp
+(use-package auto-scroll-mode
+  :ensure t
+  :commands (auto-scroll-mode))
+#+end_src
+
 * Usage
+
+1. =[M-x auto-scroll-mode]= to enable.
+2. press =[q]= to quit.
+3. press =[+/-]= to change speed.
