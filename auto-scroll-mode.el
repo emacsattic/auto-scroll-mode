@@ -39,11 +39,9 @@
   :safe #'floatp
   :group 'auto-scroll-mode)
 
-(defcustom auto-scroll-highlight-line-face '((foreground-color . "black")
-                                             (background-color . "orange"))
-  "The face spec for `auto-scroll-mode' highlight line."
-  :type 'list
-  :safe #'listp
+(defface auto-scroll-highlight-line-face
+  '((t :foreground "black" :background "orange"))
+  "Face for auto-scroll-mode."
   :group 'auto-scroll-mode)
 
 (defvar auto-scroll--timer nil)
@@ -65,7 +63,7 @@
       (when auto-scroll--overlay
         (move-overlay auto-scroll--overlay line-begin line-end))
       (overlay-put auto-scroll--overlay
-                   'face auto-scroll-highlight-line-face)
+                   'face 'auto-scroll-highlight-line-face)
       (forward-line 1))))
 
 ;;;###autoload
