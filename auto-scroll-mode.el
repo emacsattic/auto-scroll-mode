@@ -73,7 +73,8 @@
   (read-only-mode 1)
   ;; resume from paused position
   (when auto-scroll--line-position
-    (goto-line auto-scroll--line-position))
+    (goto-char (point-min))
+    (forward-line auto-scroll--line-position))
   (setq auto-scroll--timer
         (run-with-timer 0 (/ 1.0 auto-scroll-lps) #'auto-scroll--update))
   (message "auto-scroll-mode started..."))
