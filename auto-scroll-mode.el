@@ -1,9 +1,9 @@
 ;;; auto-scroll-mode.el --- Auto scroll buffer -*- lexical-binding: t; -*-
 
-;;; Time-stamp: <2020-03-02 18:58:12 stardiviner>
+;;; Time-stamp: <2020-03-11 11:04:38 stardiviner>
 
 ;; Authors: stardiviner <numbchild@gmail.com>
-;; Package-Requires: ((emacs "25"))
+;; Package-Requires: ((emacs "25") (cl-lib "0.6.1"))
 ;; Package-Version: 0.1
 ;; Keywords: docs wp
 ;; homepage: https://github.com/stardiviner/auto-scroll-mode
@@ -31,6 +31,8 @@
 
 ;;; Code:
 
+(require 'cl-lib)
+
 (defcustom auto-scroll-lps 0.4
   "Auto scroll lines per second."
   :type 'float
@@ -105,12 +107,12 @@
 (defun auto-scroll-speed-up ()
   "Speed up auto scroll."
   (interactive)
-  (setq auto-scroll-lps (incf auto-scroll-lps 0.2)))
+  (setq auto-scroll-lps (cl-incf auto-scroll-lps 0.2)))
 
 (defun auto-scroll-speed-down ()
   "Speed down auto scroll."
   (interactive)
-  (setq auto-scroll-lps (decf auto-scroll-lps 0.2)))
+  (setq auto-scroll-lps (cl-decf auto-scroll-lps 0.2)))
 
 (defvar auto-scroll-mode-map
   (let ((map (make-sparse-keymap)))
