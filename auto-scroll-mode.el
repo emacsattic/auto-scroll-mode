@@ -127,7 +127,7 @@
 (define-minor-mode auto-scroll-mode
   "Auto scroll buffer minor mode."
   :init nil
-  :lighter " Auto/Scroll "
+  :lighter " Auto/Scroll"
   :keymap auto-scroll-mode-map
   (if auto-scroll-mode
       (auto-scroll-start)
