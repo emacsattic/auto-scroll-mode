@@ -1,11 +1,11 @@
 ;;; auto-scroll-mode.el --- Auto scroll buffer -*- lexical-binding: t; -*-
 
-;;; Time-stamp: <2020-03-16 09:32:05 stardiviner>
+;;; Time-stamp: <2020-03-16 09:33:26 stardiviner>
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "25") (cl-lib "0.6.1"))
 ;; Package-Version: 0.1
-;; Keywords: docs wp
+;; Keywords: wp
 ;; homepage: https://github.com/stardiviner/auto-scroll-mode
 
 ;; auto-scroll-mode is free software; you can redistribute it and/or modify it
