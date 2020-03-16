@@ -1,6 +1,6 @@
 ;;; auto-scroll-mode.el --- Auto scroll buffer -*- lexical-binding: t; -*-
 
-;;; Time-stamp: <2020-03-11 11:04:38 stardiviner>
+;;; Time-stamp: <2020-03-16 09:32:05 stardiviner>
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "25") (cl-lib "0.6.1"))
@@ -49,7 +49,7 @@
 (defvar auto-scroll--overlay nil)
 
 (defun auto-scroll--update ()
-  "Auto scroll downl N lines per second of buffer."
+  "Auto scroll down N lines per second of buffer."
   (let* ((line-begin (line-beginning-position))
          (line-end (line-end-position)))
     (if (eobp) ; reached end of buffer.
