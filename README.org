@@ -1,3 +1,7 @@
+* ARCHIVED
+
+This minor mode is migrated into [[https://github.com/stardiviner/amread-mode][amread-mode]] now.
+
 * Intro
 
 [[file:screencast.gif]]
